@@ -4,7 +4,7 @@ import com.epam.tat.module4.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.internal.ExpectedExceptionsHolder;
+
 
 public class CalculatorTest {
     private Calculator calculator;
@@ -106,27 +106,30 @@ public class CalculatorTest {
         double result = calculator.sin(90.0d);
         Assert.assertEquals(result, 1.0d);
     }
+
     @Test
-    public void isPositiveTest(){
-        boolean result=calculator.isPositive(-5L);
-        Assert.assertEquals(result,false);
-    }
-    @Test
-    public void isPositiveZeroTest(){
-        boolean result=calculator.isPositive(0L);
-        Assert.assertEquals(result,false);
-    }
-    @Test
-    public void isNegativeTest(){
-        boolean result=calculator.isNegative(-5L);
-        Assert.assertEquals(result,true);
-    }
-    @Test
-    public void isNegativeZeroTest(){
-        boolean result=calculator.isNegative(0L);
-        Assert.assertEquals(result,false);
+    public void isPositiveTest() {
+        boolean result = calculator.isPositive(-5L);
+        Assert.assertEquals(result, false);
     }
 
+    @Test
+    public void isPositiveZeroTest() {
+        boolean result = calculator.isPositive(0L);
+        Assert.assertEquals(result, false);
+    }
+
+    @Test
+    public void isNegativeTest() {
+        boolean result = calculator.isNegative(-5L);
+        Assert.assertEquals(result, true);
+    }
+
+    @Test
+    public void isNegativeZeroTest() {
+        boolean result = calculator.isNegative(0L);
+        Assert.assertEquals(result, false);
+    }
 
 
 }
